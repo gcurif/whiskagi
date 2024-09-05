@@ -60,6 +60,93 @@ header{
 
 }
 
+/* Imagen de fondo para la sección principal */
+.hero-section {
+  background-image: url('img/hero.png'); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Crea un overlay oscuro sobre la imagen */
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2; /* Asegura que el texto y las cajas estén por encima del overlay */
+  padding-top: 100px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+}
+
+.hero-section .btn {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Estilo de las cajas de beneficios (Benefit Boxes) */
+.benefit-box {
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.13) 68.53%);
+  backdrop-filter: blur(16px);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.benefit-box h5 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-box p {
+  font-size: 1rem;
+}
+
+.benefit-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero-section {
+      height: auto;
+      padding-top: 60px;
+      padding-bottom: 60px;
+  }
+
+  .hero-section h1 {
+      font-size: 2rem;
+  }
+
+  .hero-section p {
+      font-size: 1rem;
+  }
+}
+
+
+
 /* Servicios */
 .service-box {
   display: flex;
