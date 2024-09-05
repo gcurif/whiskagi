@@ -81,14 +81,14 @@ header{
 }
 
 .service-box h2 {
-  font-size: 1.2rem; /* Ajusta el tamaño de fuente del título */
+  font-size: 1.5rem; /* Ajusta el tamaño de fuente del título */
   margin-bottom: 15px; /* Espaciado uniforme debajo del título */
   word-wrap: break-word; /* Asegura que el texto largo se ajuste en pantallas pequeñas */
 }
 
 .service-box p {
-  font-size: 0.95rem; /* Ajuste ligero del tamaño de fuente del párrafo */
-  margin-top: 10px;
+  font-size: 1rem; /* Ajuste ligero del tamaño de fuente del párrafo */
+  margin-top: 5px;
 }
 
 .service-box:hover {
@@ -118,15 +118,17 @@ header{
 
     
     width: 90%; /* Las cajas ocupan el 100% del ancho en pantallas pequeñas */
-    padding: 20px;
+    padding: 30px;
   }
 
   .service-box h2 {
-    font-size: 1rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+    font-size: 1.5rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+    padding-bottom: 0.3em;
   }
 
   .service-box p {
-    font-size: 0.9rem; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+    font-size: 1rem; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+    margin-top: -6em;
   }
 }
 
@@ -201,7 +203,7 @@ header{
   height: 80%;
   background-color: #f0f0f0;
   padding: 3em;
-  padding-left: 3em;
+  padding-right: 10em;
   min-height: 80vh;
   
 }
@@ -269,6 +271,6 @@ background: var(--light-white-6, rgba(255, 255, 255, 0.06));
 
 @media (min-width: 768px) {
   .contact-info {
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
   }
 }
