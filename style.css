@@ -1,8 +1,9 @@
-main , html , body{
+/* General Styles */
+main, html, body {
   background-color: #18113B;
 }
 
-header{
+header {
   background-color: #050B36;
 }
 
@@ -33,50 +34,44 @@ header{
   text-decoration: none;
 }
 
-
 /* Responsividad */
-/*darle espacio entre cada elemento de la lista*/
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
     padding-left: 1em;
     padding-right: 1em;
-    padding-inline-start: 1em;
-    
-
   }
-.navbar-links{
-  padding-left: 1em;
-}
-  .navbar li{
+  .navbar-links {
     padding-left: 1em;
   }
-
+  .navbar li {
+    padding-left: 1em;
+  }
   .navbar-links a {
     font-size: 0.8em;
-  
   }
-
-
 }
-.containertitulo{
+
+/* Contenedor del título alineado a la izquierda */
+.containertitulo {
   display: flex;
   flex-direction: column;
   width: 60%;
   align-items: flex-start;
-
+  animation: slideInLeft 1s ease-out; /* Animación de entrada */
 }
 
 /* Imagen de fondo para la sección principal */
 .hero-section {
   background-image: url('img/hero.png'); /* Ruta de la imagen de fondo */
   background-size: cover;
-  background-position: cover;
+  background-position: center; /* Alineación correcta de la imagen */
   height: 140vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 50px; /* Alinea el contenido a la izquierda */
 }
 
 .overlay {
@@ -92,29 +87,89 @@ header{
 .hero-section .container {
   position: relative;
   z-index: 2; /* Asegura que el texto y las cajas estén por encima del overlay */
-  padding-top: 100px;
 }
 
+/* Estilo del título y subtítulo */
 .hero-section h1 {
   font-size: 3rem;
   font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .hero-section p {
   font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 30px;
+  max-width: 600px; /* Limita el ancho del texto */
 }
 
+/* Estilo del botón */
 .hero-section .btn {
   font-size: 1.2rem;
   padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #18113B;
+  border-radius: 8px;
+  border: none;
 }
 
+.hero-section .btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Animación de entrada desde la izquierda */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px; /* Ajusta el padding en pantallas pequeñas */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .containertitulo {
+    width: 100%;
+  }
+}
+
+
 /* Estilo de las cajas de beneficios (Benefit Boxes) */
+
+@keyframes fallFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .benefit-box {
   border-radius: 16px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.13) 68.53%);
 
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(10px);
   color: white;
   padding: 20px;
   text-align: center;
@@ -122,6 +177,7 @@ header{
   transition: transform 0.3s ease-in-out;
   flex: 1 1 250px; /* Asegura que todas las cajas tengan el mismo tamaño mínimo */
   max-width: 250px; /* Limita el ancho máximo de las cajas */
+  animation : fallFromTop 1s ease-out; /* Animación de entrada */
 }
 
 .benefit-box h5 {
@@ -155,26 +211,23 @@ header{
   }
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .hero-section {
-      height: auto;
-      padding-top: 60px;
-      padding-bottom: 60px;
-  }
-
-  .hero-section h1 {
-      font-size: 2rem;
-  }
-
-  .hero-section p {
-      font-size: 1rem;
-  }
-}
 
 
 
 /* Servicios */
+
+@keyframes fallFromRight
+{
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+}
 .service-box {
   display: flex;
   flex-direction: column;
@@ -192,6 +245,7 @@ header{
   height: 300px; /* Mantiene una altura fija */
   width: 228px;
   max-width: 350px; /* Limita el ancho máximo de las cajas */
+  animation: fallFromRight 1s ease-out; /* Animación de entrada */
 }
 
 .service-box h2 {
