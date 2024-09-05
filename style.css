@@ -201,7 +201,7 @@ header{
   height: 80%;
   background-color: #f0f0f0;
   padding: 3em;
-  padding-left: 3em;
+  padding-right: 10em;
   min-height: 80vh;
   
 }
@@ -269,6 +269,6 @@ background: var(--light-white-6, rgba(255, 255, 255, 0.06));
 
 @media (min-width: 768px) {
   .contact-info {
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
   }
 }
