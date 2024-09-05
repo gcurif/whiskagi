@@ -59,13 +59,20 @@ header{
 
 
 }
+.containertitulo{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+
+}
 
 /* Imagen de fondo para la sección principal */
 .hero-section {
   background-image: url('img/hero.png'); /* Ruta de la imagen de fondo */
   background-size: cover;
   background-position: cover;
-  height: 100vh;
+  height: 140vh;
   position: relative;
   display: flex;
   flex-direction: column;
