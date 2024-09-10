@@ -25,6 +25,11 @@ header {
   color: #fff;
 }
 
+.navbar{
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
 /* Enlaces de navegación */
 .navbar-links a {
   font-family: 'Inter', sans-serif;
@@ -32,6 +37,7 @@ header {
   color: #fff;
   margin-right: 20px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 /* Responsividad */
@@ -358,7 +364,7 @@ header {
 
 /* Sección de Contacto */
 .contact-content {
-  min-width: 99vw;
+  /*min-width: 99vw;*/
   background-color: #1B1B3E;
   color: rgb(0, 0, 0);
   
