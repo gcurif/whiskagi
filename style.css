@@ -1,450 +1,408 @@
-/* General Styles */
-main, html, body {
-  background-color: #18113B;
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes fallFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes fallFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+body,html,main {
+    background-color: #18113b
 }
 
 header {
-  background-color: #050B36;
+    background-color: #050b36
 }
 
-/* Logo */
 .logo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center
 }
 
 .logo-text-agile {
-  font-family: 'Lato', sans-serif;
-  font-size: 24px;
-  color: #fff;
+    font-family: "Lato",sans-serif;
+    font-size: 24px;
+    color: #fff
 }
 
-.logo-text {
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  color: #fff;
+.logo-text,.navbar-links a {
+    font-family: "Inter",sans-serif;
+    font-size: 24px;
+    color: #fff
 }
 
-.navbar{
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
+.navbar {
+    padding-top: 1.2em;
+    padding-bottom: 1.2em
 }
 
-/* Enlaces de navegación */
 .navbar-links a {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  color: #fff;
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: 600;
+    font-size: 18px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 600
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: space-between;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .navbar-links {
-    padding-left: 1em;
-  }
-  .navbar li {
-    padding-left: 1em;
-  }
-  .navbar-links a {
-    font-size: 0.8em;
-  }
+@media (max-width:768px) {
+    .navbar {
+        justify-content: space-between;
+        padding-right: 1em
+    }
+
+    .navbar,.navbar li,.navbar-links {
+        padding-left: 1em
+    }
+
+    .navbar-links a {
+        font-size: .8em
+    }
 }
 
-/* Contenedor del título alineado a la izquierda */
+.containertitulo,.hero-section {
+    display: flex;
+    flex-direction: column
+}
+
 .containertitulo {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  align-items: flex-start;
-  animation: slideInLeft 1s ease-out; /* Animación de entrada */
+    width: 60%;
+    align-items: flex-start;
+    animation: slideInLeft 1s ease-out
 }
 
-/* Imagen de fondo para la sección principal */
 .hero-section {
-  background-image: url('img/hero.png'); /* Ruta de la imagen de fondo */
-  background-size: cover;
-  background-position: center; /* Alineación correcta de la imagen */
-  height: 140vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 50px; /* Alinea el contenido a la izquierda */
+    background-image: url(img/hero.png);
+    background-size: cover;
+    background-position: center;
+    height: 140vh;
+    position: relative;
+    justify-content: center;
+    padding-left: 50px
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Crea un overlay oscuro sobre la imagen */
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1
 }
 
 .hero-section .container {
-  position: relative;
-  z-index: 2; /* Asegura que el texto y las cajas estén por encima del overlay */
+    position: relative;
+    z-index: 2
 }
 
-/* Estilo del título y subtítulo */
 .hero-section h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px
 }
 
 .hero-section p {
-  font-size: 1.25rem;
-  color: #fff;
-  margin-bottom: 30px;
-  max-width: 600px; /* Limita el ancho del texto */
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 30px;
+    max-width: 600px
 }
 
-/* Estilo del botón */
 .hero-section .btn {
-  font-size: 1.2rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #fff;
-  color: #18113B;
-  border-radius: 8px;
-  border: none;
+    font-size: 1.2rem;
+    padding: .75rem 1.5rem;
+    background-color: #fff;
+    color: #18113b;
+    border-radius: 8px;
+    border: 0
 }
 
 .hero-section .btn:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0
 }
 
-/* Animación de entrada desde la izquierda */
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@media (max-width:768px) {
+    .hero-section {
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 20px
+    }
+
+    .hero-section h1 {
+        font-size: 2rem
+    }
+
+    .hero-section p {
+        font-size: 1rem
+    }
+
+    .containertitulo {
+        width: 100%
+    }
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .hero-section {
-    height: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 20px; /* Ajusta el padding en pantallas pequeñas */
-  }
-
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-
-  .hero-section p {
-    font-size: 1rem;
-  }
-
-  .containertitulo {
-    width: 100%;
-  }
-}
-
-
-/* Estilo de las cajas de beneficios (Benefit Boxes) */
-
-@keyframes fallFromTop {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .benefit-box {
-  border-radius: 16px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.13) 68.53%);
-
-  backdrop-filter: blur(10px);
-  color: white;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  flex: 1 1 250px; /* Asegura que todas las cajas tengan el mismo tamaño mínimo */
-  max-width: 250px; /* Limita el ancho máximo de las cajas */
-  animation : fallFromTop 1s ease-out; /* Animación de entrada */
+    border-radius: 16px;
+    background: linear-gradient(180deg,rgba(255,255,255,.25)0,rgba(255,255,255,.13) 68.53%);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition: transform .3s ease-in-out;
+    flex: 1 1 250px;
+    max-width: 250px;
+    animation: fallFromTop 1s ease-out
 }
 
-.benefit-box h5 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+.benefit-box h5,.service-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px
 }
 
 .benefit-box p {
-  font-size: 1rem;
-  
+    font-size: 1rem
 }
 
-.benefit-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+.benefit-box:hover,.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0,0,0,.2)
 }
 
-/* Contenedor de las cajas de beneficios */
 .benefit-row {
-  display: flex;
-  justify-content: center; /* Centra las cajas en la fila */
-  gap: 20px; /* Añade espacio entre las cajas */
-  flex-wrap: wrap; /* Permite que las cajas se ajusten en pantallas pequeñas */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap
 }
 
-/* Responsividad para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .benefit-row {
-    flex-direction: column; /* Alinea las cajas verticalmente en pantallas pequeñas */
-    align-items: center; /* Centra las cajas en la vista móvil */
-  }
+@media (max-width:768px) {
+    .benefit-row {
+        flex-direction: column;
+        align-items: center
+    }
 }
 
-
-
-
-/* Servicios */
-
-@keyframes fallFromRight
-{
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
+.service-box,.services-row {
+    display: flex;
+    justify-content: space-between
 }
+
 .service-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Asegura que el contenido esté distribuido uniformemente */
-  align-items: center;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.13) 68.53%);
-  backdrop-filter: blur(16px);
-  color: white;
-  border-radius: 16px;
-  text-align: center;
-  padding: 1em;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  flex-grow: 1; /* Permite que las cajas crezcan para llenar el espacio disponible */
-  flex-basis: calc(20% - 2em); /* Ajusta el ancho base de cada caja */
-  height: 300px; /* Mantiene una altura fija */
-  width: 228px;
-  max-width: 350px; /* Limita el ancho máximo de las cajas */
-  animation: fallFromRight 1s ease-out; /* Animación de entrada */
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(255,255,255,.25)0,rgba(255,255,255,.13) 68.53%);
+    backdrop-filter: blur(16px);
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    padding: 1em;
+    transition: transform .3s ease-in-out,box-shadow .3s ease-in-out;
+    flex-grow: 1;
+    flex-basis: calc(20% - 2em);
+    height: 300px;
+    width: 228px;
+    max-width: 350px;
+    animation: fallFromRight 1s ease-out
 }
 
 .service-box h2 {
-  font-size: 1.5rem; /* Ajusta el tamaño de fuente del título */
-  margin-bottom: 15px; /* Espaciado uniforme debajo del título */
-  word-wrap: break-word; /* Asegura que el texto largo se ajuste en pantallas pequeñas */
+    word-wrap: break-word
 }
 
 .service-box p {
-  font-size: 1rem; /* Ajuste ligero del tamaño de fuente del párrafo */
-  margin-top: 5px;
+    font-size: 1rem;
+    margin-top: 5px
 }
 
-.service-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Fila de servicios */
 .services-row {
-  margin-left: -1.6em;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between; /* Distribuye uniformemente los cuadros */
-  gap: 3.5em; /* Espacio entre columnas */
-  margin-bottom: 2em; /* Añade espacio extra debajo de la fila */
-  width: 100%; /* Usa todo el ancho del contenedor */
-  
-}
-/*cajas hacia abajo en dispostivios moviles */
-@media (max-width: 768px) {
-  .services-row {
-    flex-direction: column;
-    align-items: center;
-  }
-  .service-box {
-    margin-left: 3em;
-
-    
-    width: 90%; /* Las cajas ocupan el 100% del ancho en pantallas pequeñas */
-    padding: 30px;
-  }
-
-  .service-box h2 {
-    font-size: 1.5rem; /* Ajusta el tamaño del título en pantallas pequeñas */
-    padding-bottom: 0.3em;
-  }
-
-  .service-box p {
-    font-size: 1rem; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
-    margin-top: -6em;
-  }
+    margin-left: -1.6em;
+    flex-wrap: nowrap;
+    gap: 3.5em;
+    margin-bottom: 2em;
+    width: 100%
 }
 
+@media (max-width:768px) {
+    .services-row {
+        flex-direction: column;
+        align-items: center
+    }
 
+    .service-box {
+        margin-left: 3em;
+        width: 90%;
+        padding: 30px
+    }
 
-/* Estilos para la sección de tecnologías */
+    .service-box h2 {
+        font-size: 1.5rem;
+        padding-bottom: .3em
+    }
+
+    .service-box p {
+        font-size: 1rem;
+        margin-top: -6em
+    }
+}
+
 .tools-grid {
-  margin-left: -2.5em;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr); /* Crea 8 columnas de igual tamaño */
-  gap: 1.5em; /* Espacio entre las herramientas */
-  padding: 0.1em; /* Padding interno */
+    margin-left: -2.5em;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 1.5em;
+    padding: .1em
 }
 
 .tool {
-  background-color: #231953;
-  border-radius: 28px;
-  padding: 1em;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, background-color 0.3s;
-  color: white;
-  width: 130px; /* Asegura que ocupe todo el ancho disponible */
-  height: 130px; /* Tamaño fijo para todas las tools */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
+    background-color: #231953;
+    border-radius: 28px;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition: transform .3s,background-color .3s;
+    color: #fff;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
 
 .tool:hover {
-  transform: scale(1.05);
-  background-color: #e0e0e0;
-  color: #231953; /* Cambia el color del texto en hover */
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+    color: #231953
 }
 
 .tool img {
-  width: 3em; /* Ajusta el tamaño de las imágenes de tecnología */
-  height: 3em;
-  margin-bottom: 0.5em;
+    width: 3em;
+    height: 3em;
+    margin-bottom: .5em
 }
 
 .tool p {
-  font-size: 1rem; /* Tamaño de fuente para el nombre de la tecnología */
-  margin: 0;
-  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap
 }
 
-@media (max-width: 768px) {
-  .tools-grid {
-    margin-left: 1em;
-    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas pequeñas */
-  }
+@media (max-width:768px) {
+    .tools-grid {
+        margin-left: 1em;
+        grid-template-columns: repeat(2,1fr)
+    }
 
-  .tool {
-    height: 130px; /* Reduce el tamaño de las tools en pantallas pequeñas */
-  }
+    .tool {
+        height: 130px
+    }
 }
 
-/* Sección de Contacto */
 .contact-content {
-  /*min-width: 99vw;*/
-  background-color: #1B1B3E;
-  color: rgb(0, 0, 0);
-  
-  padding-right: 1.5em;
-  margin-left: -5em;
+    background-color: #1b1b3e;
+    color: #000;
+    padding-right: 1.5em;
+    margin-left: -5em
 }
 
 .contact-info {
-  width: 60%;
-  height: 80%;
-  background-color: #f0f0f0;
-  padding: 3em;
-  padding-right: 10em;
-  min-height: 80vh;
-  
+    width: 60%;
+    height: 80%;
+    background-color: #f0f0f0;
+    padding: 3em 10em 3em 3em;
+    min-height: 80vh
 }
 
 .contact-form-container {
-  background-color:#1B1B3E;
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 16px;
+    background-color: #1b1b3e;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 16px
 }
 
 .contact-form {
-  width: 100%;
-  max-width: 400px;
+    width: 100%;
+    max-width: 400px
 }
 
-.contact-form input, 
-.contact-form textarea {
-
-  color: white;
-  border: 1px solid #444;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 1em;
-  border: 1px solid var(--light-white-25, rgba(255, 255, 255, 0.25));
-background: var(--light-white-6, rgba(255, 255, 255, 0.06));
+.contact-form input,.contact-form textarea {
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 1em;
+    border: 1px solid var(--light-white-25, rgba(255, 255, 255, 0.25));
+    background: var(--light-white-6, rgba(255, 255, 255, 0.06))
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
+.contact-form input::placeholder,.contact-form textarea::placeholder {
+    color: #aaa
 }
 
 .contact-form button {
-  width: 100%;
-  background-color: #7e57c2;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 20px;
-  cursor: pointer;
+    width: 100%;
+    background-color: #7e57c2;
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer
 }
 
 .contact-form button:hover {
-  background-color: #5e35b1;
+    background-color: #5e35b1
 }
 
-@media (max-width: 768px) {
-  .contact-content {
-    margin-left: 0;
-    flex-direction: column;
-  }
+@media (max-width:768px) {
+    .contact-content {
+        margin-left: 0;
+        flex-direction: column
+    }
 
-  .contact-info, .contact-form-container {
-    width: 100%;
-    margin-bottom: 1em;
-  }
+    .contact-form-container,.contact-info {
+        width: 100%;
+        margin-bottom: 1em
+    }
 
-  .contact-info {
-    text-align: left;
-  }
+    .contact-info {
+        text-align: left
+    }
 }
 
-@media (min-width: 768px) {
-  .contact-info {
-    clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
-  }
+@media (min-width:768px) {
+    .contact-info {
+        clip-path: polygon(0 0,100%0,78% 100%,0 100%)
+    }
 }
