@@ -3,241 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformación Digital</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap-grid.min.css" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <title>AgileWhiskers - Transformación Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="navbar container d-flex justify-content-between align-items-center">
-            <div class="logo d-flex align-items-center">
-                <img src="img/logo.svg" alt="Agile Whiskers Logo" style="height: 50px;" />
-                <span class="logo-text-agile ms-2">Agile</span>
-                <span class="logo-text" style="font-weight: 600; letter-spacing: -2%;">whiskers</span>
-            </div>
-            <nav class="navbar-links d-flex justify-content-end">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#tecnologia" class="nav-link">Tecnología</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+
+    <!-- Header Section -->
+    <header class="header bg-primary-gradient text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="/img/Group.svg" alt="Logo" class="logo">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Tecnología</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Transformación Digital</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!-- MAIN CONTENT -->
-        <main>
-            <!-- Sección de Imagen Principal -->
-            <section class="hero-section d-flex align-items-center justify-content-start">
-                <div class="overlay"></div>
-                <div class="container text-white main-img-text">
-                <div class=" containertitulo">
-                    <h1 class="display-4">Impulsa tu Transformación Digital</h1>
-                    <p class="lead">Nos especializamos en ofrecer soluciones tecnológicas innovadoras para optimizar y transformar tu negocio. Desde la nube hasta el desarrollo de software a medida, te acompañamos en cada paso del camino hacia la excelencia digital.</p>
-                    <a href="#" class="btn btn-light mt-3">Comienza Hoy</a>
-                  </div>
+    <!-- Main Section -->
+    <section class="hero d-flex">
+        <div class="col-md-8 py-5 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="display-4 fw-bold">Impulsa tu Transformación Digital</h1>
+                        <p class="lead">Nos especializamos en ofrecer soluciones tecnológicas innovadoras para optimizar y transformar tu negocio. Desde la nube hasta el desarrollo de software a medida, te acompañamos en cada paso del camino hacia la excelencia digital.</p>
+                        <a href="#" class="btn btn-outline-primary">Comienza Hoy</a>
+                    </div>
                 </div>
-                <!-- Cajas de beneficios -->
-                <div class="row justify-content-center" style="margin-top: 16vh; z-index: 1;">
-                  <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="benefit-box">
-                      <h5>Compromiso con tu visión</h5>
-                      <p>Hacemos realidad lo que imaginas, creando productos que reflejan fielmente tu visión, porque creemos que la tecnología debe servir a tu negocio.</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="benefit-box">
-                      <h5>Talento excepcional</h5>
-                      <p>Buscamos y potenciamos talentos únicos, formando equipos que aportan un valor distintivo a cada proyecto.</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="benefit-box">
-                      <h5>Tecnologías de vanguardia</h5>
-                      <p>Estamos a la vanguardia de la innovación, utilizando las mejores prácticas y tecnologías para asegurar el éxito de tu proyecto.</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="benefit-box">
-                      <h5>Transformación digital y desarrollo ágil</h5>
-                      <p>Combinamos nuestra experiencia en transformación digital con un enfoque ágil para evolucionar tecnológicamente tus procesos.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                </section>
-        </main>
-    
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-    </html>
-    
-
-
-    <!-- Sección de Servicios -->
-    <section class="sections-without-img">
-      <section id="servicios" class="services container my-5 ">
-        <div class="row justify-content-center services-row">
-          <div class="col-lg-2 col-md-4 col-sm-6 service">
-            <div class="service-box">
-              <h2>Desarrollo de software a medida</h2>
-              <p>Creamos soluciones de software personalizadas que se alinean perfectamente con las necesidades de tu
-                negocio.</p>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 service">
-            <div class="service-box">
-              <h2>Soluciones cloud y migración a la nube</h2>
-              <p>Facilitamos la transición de tu empresa a la nube, maximizando la eficiencia y escalabilidad de tus
-                operaciones.</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 service">
-            <div class="service-box">
-              <h2>Soporte y mantenimiento de aplicaciones</h2>
-              <p>Optimización de procesos para un futuro más eficiente y tecnológicamente avanzado.</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 service">
-            <div class="service-box">
-              <h2>Consultoría y apoyo en transformación digital</h2>
-              <p>Acompañamos y guiamos a tu empresa en su evolución digital, optimizando procesos para un futuro más
-                eficiente.</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 service">
-            <div class="service-box">
-              <h2>Reclutamiento de talento y formación de equipos</h2>
-              <p>Seleccionamos a los mejores talentos y expertos para tu proyecto, asegurando un equipo que cumpla con las
-                expectativas.</p>
-            </div>
-          </div>
         </div>
-      </section>
-    
-      <!-- Sección de Tecnologías -->
-      <section id="tecnologia" class="technologies container my-5">
-        <div class="tools-grid">
-          <div class="tool">
-            <img src="img/angular-1.svg" alt="Angular" />
-            <p>Angular</p>
-          </div>
-          <div class="tool">
-            <img src="img/aws-1.svg" alt="AWS" />
-            <p>AWS</p>
-          </div>
-          <div class="tool">
-            <img src="img/fastapi-1.svg" alt="FastAPI" />
-            <p>FastAPI</p>
-          </div>
-          <div class="tool">
-            <img src="img/fortify-1.svg" alt="Fortify" />
-            <p>Fortify</p>
-          </div>
-          <div class="tool">
-            <img src="img/gitlab-1.svg" alt="GitLab" />
-            <p>GitLab</p>
-          </div>
-          <div class="tool">
-            <img src="img/google-cloud-1.svg" alt="Google Cloud" />
-            <p>Google Cloud</p>
-          </div>
-          <div class="tool">
-            <img src="img/icons8-django-1.svg" alt="Django" />
-            <p>Django</p>
-          </div>
-          <div class="tool">
-            <img src="img/icons8-python-1.svg" alt="Python" />
-            <p>Python</p>
-          </div>
-          <div class="tool">
-            <img src="img/jenkins-1.svg" alt="Jenkins" />
-            <p>Jenkins</p>
-          </div>
-          <div class="tool">
-            <img src="img/mongodb-svgrepo-com-1.svg" alt="MongoDB" />
-            <p>MongoDB</p>
-          </div>
-          <div class="tool">
-            <img src="img/next-js-1.svg" alt="Next.js" />
-            <p>Next.js</p>
-          </div>
-          <div class="tool">
-            <img src="img/postgressql-1.svg" alt="PostgreSQL" />
-            <p>PostgreSQL</p>
-          </div>
-          <div class="tool">
-            <img src="img/react-1.svg" alt="React" />
-            <p>React</p>
-          </div>
-          <div class="tool">
-            <img src="img/sonarqube-1-1.svg" alt="SonarQube" />
-            <p>SonarQube</p>
-          </div>
-          <div class="tool">
-            <img src="img/vue-js-1.svg" alt="Vue.js" />
-            <p>Vue.Js</p>
-          </div>
-          <div class="tool">
-            <img src="img/oracle-svgrepo-com-2.svg" alt="Oracle" />
-            <p>Oracle</p>
-          </div>
+        <div class="vertical col-md-4 d-flex justify-content-center align-items-center">
+            <div class="laptop-container">
+                <img src="/img/LaptopImg.png" alt="Laptop Image" class="laptop-frame">
+            </div>
         </div>
-      </section>
-    
-    
-    
-      <!-- Sección de Contacto -->
-      <section id="contacto" class="contact container my-5">
-        <div class="contact-content row">
-          <!-- Texto de la izquierda -->
-          <div class="col-md-6 contact-info">
-            <p>Al contactarnos, te ofrecemos:</p>
-            <ol>
-              <li><strong>Soluciones efectivas y personalizadas:</strong> Te diremos exactamente qué puedes hacer para
-                resolver tu problema, ya sea relacionado con la velocidad, conectividad o seguridad de tu sistema.</li>
-              <li><strong>Asesoría experta y directa:</strong> Podrás hablar directamente con un especialista que resolverá
-                tus dudas y te recomendará la mejor opción para tu caso específico.</li>
-              <li><strong>Propuesta integral:</strong> Nos encargaremos de solucionar el problema por ti, para que dejes de
-                preocuparte y puedas enfocarte en lo que realmente importa. Confía en nosotros para eliminar esas molestias
-                de una vez por todas.</li>
-            </ol>
-          </div>
-          <!-- Formulario de contacto -->
-          <div class="col-md-6 contact-form-container">
-            <form class="contact-form">
-              <div class="mb-3">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" />
-              </div>
-              <div class="mb-3">
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Número de WhatsApp" />
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Correo" />
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control" id="message" name="message" placeholder="Mensaje"></textarea>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">ENVIAR</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
     </section>
 
+    <!-- Features Section -->
+    <section class="features text-center py-5">
+        <div class="container-features">
+            <h2 class="fw-bold">Impulsando la Innovación y la Transformación Digital</h2>
+            <p class="lead">Nos comprometemos a hacer realidad tu visión mediante el aprovechamiento de talentos excepcionales, tecnología de vanguardia y un enfoque ágil para la transformación digital.</p>
+            <div class="row mt-5">
+                <!-- Aquí irán las tarjetas de características -->
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="contact py-5 text-white bg-primary-gradient">
+        <div class="container">
+            <h2 class="text-center fw-bold">Al contactarnos, te ofrecemos:</h2>
+            <!-- Formulario de contacto -->
+        </div>
+    </section>
 
-    </main>
+    <!-- Footer Section -->
+    <footer class="text-white py-4 bg-dark">
+        <div class="container text-center">
+            <p>info@mysite.com | 123-456-7890 | 500 Terry Francois Street, San Francisco, CA 94158</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3">LinkedIn</a>
+                <a href="#" class="text-white me-3">Instagram</a>
+                <a href="#" class="text-white">Facebook</a>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>&copy; 2024 Agilewhiskers</p>
+        </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
