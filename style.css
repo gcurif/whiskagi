@@ -1,4 +1,7 @@
 /* Fondo degradado principal */
+html{
+  padding: 0;
+}
 .bg-primary-gradient {
   background: linear-gradient(118deg, #296193 -2.46%, #203B54 115.45%);
 }
@@ -18,6 +21,8 @@
 .hero {
   background-color: white;
   margin-top: 0; /* Sin margen superior */
+  min-height: 90vh;
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -45,24 +50,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible; /* Permite que el contenido sobresalga */
 }
+
+
 
 /* Estilo del laptop dentro de la sección hero */
 .laptop-container {
-  position: relative;
-  max-width: 350px; /* Ajustar el tamaño del laptop */
+  position: relative; /* El contenedor será el punto de referencia para la posición absoluta de la imagen */
+
+  overflow: visible; /* Permitir que el contenido (la imagen del laptop) sobresalga del contenedor */
 }
 
-.laptop-frame {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra suave para efecto 3D */
-}
+.laptop-container img{
+  width: 390px;
+  height: 350px;
+  position: absolute; /* Posición absoluta para que la imagen se pueda superponer al contenedor */
+  margin-left: -220px;
+  margin-top: -13em;
+  overflow: hidden;
+  }
+
+
+
+
 
 /* Sección de contacto */
 .contact textarea {
   height: 150px;
 }
+
 
 /* Estilo de enlaces de redes sociales */
 .social-links a {
