@@ -1,7 +1,10 @@
 /* Fondo degradado principal */
-html{
+html, body {
   padding: 0;
+  margin: 0;
+  font-size: 16px; /* Base para las unidades relativas */
 }
+
 .bg-primary-gradient {
   background: linear-gradient(118deg, #296193 -2.46%, #203B54 115.45%);
 }
@@ -9,24 +12,24 @@ html{
 /* Header (Navbar) */
 .header {
   background: #296193;
-  margin-bottom: 0; /* Aseguramos que no haya separación entre header y hero */
+  margin-bottom: 0;
 }
 
-/* Estilo del logo */
 .logo {
-  height: 50px;
+  height: 3rem; /* Tamaño del logo en unidades relativas */
 }
 
 /* Hero Section */
 .hero {
   background-color: white;
-  margin-top: 0; /* Sin margen superior */
-  min-height: 90vh;
+  margin-top: 0;
+  min-height: 90vh; /* Usamos altura mínima relativa a la ventana */
   overflow: hidden;
 }
 
 .hero h1 {
   color: #203B54;
+  font-size: 2.5rem; /* Ajuste con unidades relativas */
 }
 
 .hero p {
@@ -37,6 +40,7 @@ html{
 .hero .btn-outline-primary {
   border: 2px solid #296193;
   color: #296193;
+  padding: 0.75rem 1.5rem; /* Usar padding consistente */
 }
 
 .hero .btn-outline-primary:hover {
@@ -50,42 +54,51 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible; /* Permite que el contenido sobresalga */
+  overflow: visible;
 }
-
-
 
 /* Estilo del laptop dentro de la sección hero */
 .laptop-container {
-  position: relative; /* El contenedor será el punto de referencia para la posición absoluta de la imagen */
-
-  overflow: visible; /* Permitir que el contenido (la imagen del laptop) sobresalga del contenedor */
+  position: relative;
+  overflow: visible;
 }
 
-.laptop-container img{
-  width: 390px;
-  height: 350px;
-  position: absolute; /* Posición absoluta para que la imagen se pueda superponer al contenedor */
-  margin-left: -220px;
-  margin-top: -13em;
-  overflow: hidden;
+.laptop-container img {
+  width: 32vw; /* Usar porcentaje relativo al ancho de la ventana */
+  height: 55vh; /* Mantener proporciones */
+  position: absolute;
+  top: -12.5rem;
+  left: -15rem;
+}
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .laptop-container img {
+    width: 40vw;
+    left: -6rem;
+    top: -5rem;
   }
+}
 
-
-
-
+/* Ajustes para tablets */
+@media screen and (max-width: 1024px) {
+  .laptop-container img {
+    width: 32vw;
+    left: -7rem;
+    top: -7rem;
+  }
+}
 
 /* Sección de contacto */
 .contact textarea {
-  height: 150px;
+  height: 9rem; /* Ajuste con unidades relativas */
 }
-
 
 /* Estilo de enlaces de redes sociales */
 .social-links a {
   text-decoration: none;
   font-size: 1.2rem;
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
 /* Estilos para la sección de características (features) */
@@ -96,4 +109,5 @@ html{
 
 .card {
   color: black;
+  padding: 1.5rem; /* Ajuste del padding */
 }
