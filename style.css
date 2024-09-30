@@ -97,6 +97,33 @@ html, body {
     top: -7rem;
   }
 }
+/* Seccion Features */
+
+.card {
+  color: #161A46!important;
+  border-radius: var(--M, 12px);
+  background: var(--Base-Colors-White, #FFF);
+  /* Container Shadow */
+  box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin: 1rem;
+  height: 90%!important;
+}
+.card p{
+  color: #161A46;
+  padding-top: 2em;
+  text-align: center;
+  font-family: "Wix Madefor Display";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+.centered-img {
+  width: 8%; /* Establece el ancho de la imagen al 10% */
+  display: block; /* Hace que la imagen sea un bloque para poder centrarla */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
 
 /* Sección de contacto */
 .contact textarea {
