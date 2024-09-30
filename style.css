@@ -13,13 +13,10 @@ html, body {
 .header {
   background: #296193;
   margin-bottom: 0;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
 }
 
 .logo {
-  height: 2rem; /* Tamaño del logo en unidades relativas */
+  height: 3rem; /* Tamaño del logo en unidades relativas */
 }
 
 /* Hero Section */
@@ -70,10 +67,10 @@ html, body {
 }
 
 .laptop-container img {
-  width: 35vw; /* Usar porcentaje relativo al ancho de la ventana */
+  width: 32vw; /* Usar porcentaje relativo al ancho de la ventana */
   height: 55vh; /* Mantener proporciones */
   position: absolute;
-  top: -10.5rem;
+  top: -12.5rem;
   left: -15rem;
 }
 
