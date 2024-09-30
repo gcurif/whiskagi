@@ -41,9 +41,15 @@ html, body {
 }
 
 .hero .btn-outline-primary {
-  border: 2px solid #296193;
+  border: 1.4px solid #296193;
+  border-radius: 50px;
   color: #296193;
-  padding: 0.75rem 1.5rem; /* Usar padding consistente */
+  padding: 1em;
+  margin-left: 0.55rem;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  width: 16.8%;
 }
 
 .hero .btn-outline-primary:hover {
