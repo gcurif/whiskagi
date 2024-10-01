@@ -124,12 +124,72 @@ html, body {
   display: block; /* Hace que la imagen sea un bloque para poder centrarla */
   margin: 0 auto; /* Centra la imagen horizontalmente */
 }
-
-/* Sección de contacto */
-.contact textarea {
-  height: 9rem; /* Ajuste con unidades relativas */
+/*Seccion de servicios */
+.services {
+  
+  color: #161A46!important;
+  padding: 3rem 0;
+}
+.services .btn-outline-dark{
+border-radius: 20px;
 }
 
+ /* Estilos personalizados para la sección de contacto */
+ .form-input {
+  background-color: #0c3a63; /* Fondo de los inputs */
+  border: 1px solid #fff; /* Borde blanco */
+  color: #fff; /* Texto blanco */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-input::placeholder {
+  color: #a9c4e2; /* Color del placeholder */
+
+}
+
+/* Ajustes al botón de "WSP DIRECTO" */
+.contacto-form .form-input{
+  border-radius:10px;
+  background: var(--light-white-6, rgba(255, 255, 255, 0.06));
+}
+.btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: white;
+  color: #161A46!important;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #114b82;
+}
+
+/* Estilo del botón de enviar */
+.btn-light {
+  background-color: #fff;
+  width: 100%;
+  color: #114b82;
+  border-radius: 50px;
+  padding: 10px 40px;
+}
+
+.btn-light:hover {
+  background-color: #ddd;
+}
+
+/* Alineación de los textos en la columna izquierda */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
 /* Estilo de enlaces de redes sociales */
 .social-links a {
   text-decoration: none;
